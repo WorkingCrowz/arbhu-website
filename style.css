@@ -13,24 +13,9 @@
   --radius-lg:18px;
   --star:#f59e0b;
 
-  /* workflow accents */
-  --wf-orange:#ea6b3a;
-  --wf-gold:#e3aa2b;
-  --wf-teal:#1f8a83;
-  --wf-blue:#2e86c7;
-  --wf-purple:#7c3aed;
-
   /* spacing scale */
-  --s-1:8px;
-  --s-2:12px;
-  --s-3:16px;
-  --s-4:20px;
-  --s-5:24px;
-  --s-6:28px;
-  --s-7:32px;
-  --s-8:40px;
-  --s-9:48px;
-  --s-10:64px;
+  --s-1:8px; --s-2:12px; --s-3:16px; --s-4:20px; --s-5:24px;
+  --s-6:28px; --s-7:32px; --s-8:40px; --s-9:48px; --s-10:64px;
 }
 
 *{box-sizing:border-box}
@@ -65,6 +50,7 @@ img{max-width:100%;display:block}
 .hero{position:relative;isolation:isolate}
 .hero-bg{
   position:absolute; inset:0;
+  /* swap this for your actual hero background if needed */
   background: url("ea2408c8-7295-4dad-85a2-0946f7c2951a.png") center/cover no-repeat;
   box-shadow: inset 0 0 0 9999px rgba(0,0,0,0.35);
   z-index:-1;
@@ -84,10 +70,8 @@ img{max-width:100%;display:block}
   text-decoration:none;color:white;cursor:pointer;
 }
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--blue)}
-.btn-primary:hover{background:var(--blue-700)}
-.btn-success{background:var(--green)}
-.btn-success:hover{background:var(--green-700)}
+.btn-primary{background:var(--blue)} .btn-primary:hover{background:var(--blue-700)}
+.btn-success{background:var(--green)} .btn-success:hover{background:var(--green-700)}
 .cta-row{display:flex;gap:var(--s-3);justify-content:center;flex-wrap:wrap;margin-top:var(--s-2)}
 
 /* KPI grid */
@@ -118,47 +102,18 @@ img{max-width:100%;display:block}
 .icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
 .card .title{font-weight:800;margin-top:var(--s-2)}
 
-/* ===== Workflow diagram ===== */
-.workflow-container{
-  display:grid;gap:var(--s-3);
-  grid-template-columns:repeat(5,minmax(0,1fr));
+/* ===== Workflow (IMAGE) ===== */
+.workflow-section .workflow-image{
+  display:block;
+  max-width:1100px;
+  margin:0 auto;
 }
-@media (max-width:1100px){ .workflow-container{grid-template-columns:repeat(3,1fr)} }
-@media (max-width:760px){ .workflow-container{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:520px){ .workflow-container{grid-template-columns:1fr} }
-
-.workflow-step{
-  position:relative;
-  background:#f5f7fb;border:1px solid var(--line);border-radius:var(--radius-lg);
-  padding:26px 18px 22px;text-align:center;
-  box-shadow:0 8px 20px rgba(15,23,42,.06);
+.workflow-section img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(15,23,42,.08);
 }
-.workflow-ribbon{
-  position:absolute;top:0;left:50%;transform:translate(-50%,-60%);
-  width:140px;height:36px;border-radius:10px 10px 3px 3px;
-}
-.ribbon-orange{background:var(--wf-orange)}
-.ribbon-gold{background:var(--wf-gold)}
-.ribbon-teal{background:var(--wf-teal)}
-.ribbon-blue{background:var(--wf-blue)}
-.ribbon-purple{background:var(--wf-purple)}
-
-.workflow-number{
-  position:absolute;top:-18px;left:50%;transform:translateX(-50%);
-  width:42px;height:42px;border-radius:999px;background:#111;color:#fff;
-  display:grid;place-items:center;font-weight:800;border:3px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.1)
-}
-.badge-orange{background:var(--wf-orange)}
-.badge-gold{background:var(--wf-gold)}
-.badge-teal{background:var(--wf-teal)}
-.badge-blue{background:var(--wf-blue)}
-.badge-purple{background:var(--wf-purple)}
-
-.wf-icon-wrap{display:grid;place-items:center;margin-top:var(--s-2);margin-bottom:var(--s-2)}
-.wf-icon{width:58px;height:58px;color:#111}
-
-.workflow-step h3{font-weight:800;margin:var(--s-1) 0 var(--s-1);font-size:18px}
-.workflow-step p{color:#374151;margin:0;font-size:15.5px;line-height:1.55}
 
 /* Product chips + grid */
 .chip-row{display:flex;flex-wrap:wrap;gap:var(--s-2);margin:var(--s-2) 0 var(--s-3)}
