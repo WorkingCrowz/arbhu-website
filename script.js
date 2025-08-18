@@ -1,4 +1,4 @@
-// Icons (for services section)
+// Service icons (inline SVG)
 const ICON = (d) => `<div class="icon"><svg viewBox="0 0 24 24">${d}</svg></div>`;
 const svgs = {
   box:`<rect x="3" y="4" width="7" height="7"/><rect x="14" y="4" width="7" height="7"/><rect x="3" y="15" width="7" height="7"/><path d="M14 15h7v7h-7zM7 7l10 10"/>`,
@@ -9,7 +9,7 @@ const svgs = {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Footer year
+  // Year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
     </article>
   `).join("");
 
-  // Products (with images)
+  // Products
   const PRODUCTS = [
     {name:`10" Areca Palm Leaf Deep Round Plate`, meta:"200 pcs (50×4)",  cat:"Palm Leaf Plates",
      image:"images/areca-10in-deep-round.jpg",
@@ -177,7 +177,7 @@ window.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = list.map(p => `
       <div class="card product-card">
         <img class="product-thumb" src="${p.image}" alt="${p.name}" loading="lazy"
-             onerror="this.onerror=null;this.src='${PRODUCT_PLACEHOLDER}';" />
+             onerror="this.onerror=null;this.src='${PRODUCT_PLACEHOLDER}'" />
         <div class="product-body">
           <div class="product-name">${p.name}</div>
           <div class="product-meta">${p.cat} • ${p.meta}</div>
