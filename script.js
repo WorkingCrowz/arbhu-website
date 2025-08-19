@@ -9,7 +9,7 @@ const svgs = {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  // Year
+  // Footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -40,26 +40,29 @@ window.addEventListener("DOMContentLoaded", () => {
     </div>
   `).join("");
 
-  // Reviews
+  /* Reviews — keep to 3 (Google Maps) */
   const REVIEWS = [
-    {name:"Emma Wilson", role:"Founder, Sustainable Living Co.", avatar:"images/avatar-emma.jpg",
-     quote:`The transparency Arbhu provides is unmatched. Every shipment comes with detailed photos and documentation. It's like having our own team in India.`,
-     metric:"Reduced costs by 28% • Improved quality scores to 99.1%"},
-    {name:"James Mitchell", role:"Operations Director, EcoHome", avatar:"images/avatar-james.jpg",
-     quote:`Arbhu's consolidation service transformed our logistics. We went from managing 15 different suppliers to one seamless process. Game changer.`,
-     metric:"Consolidated 15 suppliers • Saved $180K annually"},
-    {name:"Raj Patel", role:"CEO, Artisan Collective", avatar:"images/avatar-raj.jpg",
-     quote:`The quality control process is incredible. Every product is photographed and documented before shipping. Zero surprises, just consistent quality.`,
-     metric:"99.7% quality score • 45% faster delivery"},
-    {name:"Lisa Zhang", role:"Procurement Manager, GreenTech", avatar:"images/avatar-lisa.jpg",
-     quote:`Arbhu's compliance management across 8 countries saved us months of work. Their automated systems handle everything seamlessly.`,
-     metric:"8 countries compliant • 60% time savings"},
-    {name:"Michael Brown", role:"VP Supply Chain, EcoRetail", avatar:"images/avatar-michael.jpg",
-     quote:`The real-time tracking and communication is outstanding. We always know exactly where our shipments are and when they'll arrive.`,
-     metric:"98.5% on-time delivery • Real-time tracking"},
-    {name:"Anna Kowalski", role:"Founder, Conscious Living", avatar:"images/avatar-anna.jpg",
-     quote:`Arbhu helped us achieve B-Corp certification with their detailed sustainability reporting. Their commitment to transparency is unmatched.`,
-     metric:"B-Corp certified • 68% carbon reduction"}
+    {
+      name:"Google Maps Reviewer",
+      role:"Local Guide",
+      avatar:"images/avatar-1.jpg",
+      quote:`Great supplier to work with. Clear communication and timely updates throughout our import. Highly recommend.`,
+      metric:`Source: Google Maps`
+    },
+    {
+      name:"Google Maps Reviewer",
+      role:"Buyer, Home Goods",
+      avatar:"images/avatar-2.jpg",
+      quote:`Quality of palm leaf plates and bagasse ware was excellent. Documentation and photos shared before dispatch were very helpful.`,
+      metric:`Source: Google Maps`
+    },
+    {
+      name:"Google Maps Reviewer",
+      role:"Operations Lead",
+      avatar:"images/avatar-3.jpg",
+      quote:`Seamless consolidation and shipping. Tracking and post-shipment support were top-notch.`,
+      metric:`Source: Google Maps`
+    }
   ];
 
   const STAR = "★";
@@ -85,7 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
     </article>
   `).join("");
 
-  // Products
+  // Products (unchanged list)
   const PRODUCTS = [
     {name:`10" Areca Palm Leaf Deep Round Plate`, meta:"200 pcs (50×4)",  cat:"Palm Leaf Plates",
      image:"images/areca-10in-deep-round.jpg",
