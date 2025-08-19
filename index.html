@@ -10,7 +10,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-bar">
-      <a class="brand" href="arbhu logo.jpg">
+      <a class="brand" href="#">
         <span class="brand-dot" aria-hidden="true"></span>
         <strong>Arbhu</strong>
       </a>
@@ -52,8 +52,8 @@
     <div class="container">
       <h2 class="section-title center">How Your Order Flows</h2>
       <div class="workflow-image">
-        <!-- Keep your own path if you prefer; this can point to /images/workflow.jpg -->
-        <img src="C:\Users\ASHISH SINGH\Desktop\ui\Black and Colorful Chart Business Scratch Presentation.jpg" alt="Workflow steps from order confirmation to fulfillment" loading="lazy" />
+        <!-- Put your image at /images/workflow.jpg or update path -->
+        <img src="images/workflow.jpg" alt="Workflow steps from order confirmation to fulfillment" loading="lazy" />
       </div>
     </div>
   </section>
@@ -71,7 +71,7 @@
     </div>
   </section>
 
-  <!-- Reviews (now limited to 3 Google Maps reviews) -->
+  <!-- Reviews (3 from Google Maps) -->
   <section id="reviews" class="section alt reviews">
     <div class="container">
       <h2 class="section-title center">What Our Clients Say</h2>
@@ -83,18 +83,16 @@
     </div>
   </section>
 
-  <!-- Video Testimonials (two rectangular boxes) -->
+  <!-- Video Testimonials -->
   <section id="videos" class="section alt video-section">
     <div class="container">
       <h2 class="section-title center">Video Testimonials</h2>
       <div class="video-grid">
-        <!-- Replace the src with your actual video URLs (YouTube/Vimeo or MP4) -->
         <div class="video-card">
           <div class="video-aspect">
             <iframe
               src="https://www.youtube.com/embed/videocode1"
-              title="Client Testimonial 1"
-              loading="lazy"
+              title="Client Testimonial 1" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
@@ -104,8 +102,7 @@
           <div class="video-aspect">
             <iframe
               src="https://www.youtube.com/embed/videocode2"
-              title="Client Testimonial 2"
-              loading="lazy"
+              title="Client Testimonial 2" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
@@ -115,13 +112,80 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
+  <!-- EXTRO (CTA + link columns) -->
+  <section id="extro" class="extro">
     <div class="container">
-      <h2 class="section-title center">Ready to start?</h2>
-      <div class="cta-row">
-        <a class="btn btn-success" href="https://wa.me/916381509553">Talk to Expert</a>
-        <a class="btn btn-primary" href="#">Request a Quote</a>
+      <div class="extro-cta">
+        <div class="extro-cta-text">
+          <h3>Ready to Grow Your Business?</h3>
+          <p>Join thousands of satisfied B2B clients who trust us for their sourcing and manufacturing needs.</p>
+        </div>
+        <a class="btn btn-light" href="#contact">Get Started ➜</a>
+      </div>
+
+      <div class="extro-columns">
+        <div class="extro-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="https://arbhuenterprises.com/about-us/" target="_blank" rel="noopener">About Us</a></li>
+            <li><a href="https://arbhuenterprises.com/" target="_blank" rel="noopener">Our Story</a></li>
+            <li><a href="#" aria-disabled="true">Careers</a></li>
+            <li><a href="#" aria-disabled="true">Certifications</a></li>
+            <li><a href="#" aria-disabled="true">Gallery</a></li>
+            <li><a href="#" aria-disabled="true">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="extro-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Sourcing</a></li>
+            <li><a href="#services">Manufacturing</a></li>
+            <li><a href="#services">Vendor Onboarding</a></li>
+            <li><a href="#services">B2B Collections</a></li>
+            <li><a href="#services">DFY Ecom Store</a></li>
+            <li><a href="#services">Whitelabelling</a></li>
+          </ul>
+        </div>
+
+        <div class="extro-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://arbhuenterprises.com/blog/" target="_blank" rel="noopener">Blogs</a></li>
+            <li><a href="#" aria-disabled="true">Newsletter</a></li>
+            <li><a href="#products">All Product Catalog</a></li>
+            <li><a href="#products">Order Samples</a></li>
+            <li><a href="#" aria-disabled="true">B2B FAQs</a></li>
+            <li><a href="https://wa.me/916381509553" target="_blank" rel="noopener">Book Meetings</a></li>
+          </ul>
+        </div>
+
+        <div class="extro-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#" aria-disabled="true">Member Ordering</a></li>
+            <li><a href="#" aria-disabled="true">Credit</a></li>
+            <li><a href="#" aria-disabled="true">Affiliate Program</a></li>
+            <li><a href="#" aria-disabled="true">Join Discord</a></li>
+          </ul>
+        </div>
+
+        <div class="extro-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#" aria-disabled="true">Terms &amp; Conditions</a></li>
+            <li><a href="#" aria-disabled="true">Privacy Policy</a></li>
+            <li><a href="#" aria-disabled="true">Shipping Policy</a></li>
+            <li><a href="#" aria-disabled="true">Returns &amp; Refunds</a></li>
+          </ul>
+          <h4 class="mt-16">Testimonials</h4>
+          <ul>
+            <li><a href="#reviews">B2B Reviews</a></li>
+            <li><a href="#videos">B2C Reviews</a></li>
+            <li><a href="#videos">B2B Testimonials</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -136,4 +200,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+</body>
+</html>
+
 
