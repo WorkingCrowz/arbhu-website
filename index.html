@@ -1,208 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arbhu — Eco Exports</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisanal Eco-Friendly Kitchenware | Premier India Sourcing & Solutions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-bar">
-      <a class="brand" href="#">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <strong>Arbhu</strong>
-      </a>
-      <nav class="nav">
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <h1>350+ Sustainable Products. One Seamless Import.</h1>
-      <p>Eco-friendly exports with instant quotes and tracked delivery from factory to warehouse—by air, sea, rail, or road.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#products">Browse Products</a>
-        <a class="btn btn-success" href="#contact">Talk to Expert</a>
-      </div>
-
-      <div class="kpi-grid" id="kpis"></div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2 class="section-title center">Services</h2>
-      <div class="card-grid" id="services-grid"></div>
-    </div>
-  </section>
-
-  <!-- Workflow (IMAGE) -->
-  <section id="workflow" class="section alt workflow-section">
-    <div class="container">
-      <h2 class="section-title center">How Your Order Flows</h2>
-      <div class="workflow-image">
-        <!-- Put your image at /images/workflow.jpg or update path -->
-        <img src="Black and Colorful Chart Business Scratch Presentation.jpg" alt="Workflow steps from order confirmation to fulfillment" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Products -->
-  <section id="products" class="section">
-    <div class="container">
-      <h2 class="section-title">Products</h2>
-      <p class="muted">Pick a category or search.</p>
-
-      <div class="chip-row" id="chips"></div>
-      <input id="search" class="input" type="text" placeholder="Search products…" />
-
-      <div id="products-grid" class="card-grid mt-24"></div>
-    </div>
-  </section>
-
-  <!-- Reviews (3 from Google Maps) -->
-  <section id="reviews" class="section alt reviews">
-    <div class="container">
-      <h2 class="section-title center">What Our Clients Say</h2>
-      <p class="reviews-subtitle">
-        Selected Google Maps reviews for
-        <a href="https://www.google.com/maps/place/Arbhu+Enterprises+Private+Limited/" target="_blank" rel="noopener">Arbhu&nbsp;Enterprises</a>.
-      </p>
-      <div class="reviews-grid" id="reviews-grid"></div>
-    </div>
-  </section>
-
-  <!-- Video Testimonials -->
-  <section id="videos" class="section alt video-section">
-    <div class="container">
-      <h2 class="section-title center">Video Testimonials</h2>
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="video-aspect">
-            <iframe
-              src="https://www.youtube.com/embed/videocode1"
-              title="Client Testimonial 1" loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <p class="video-caption">Client Testimonial 1</p>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">Arbhu Enterprises</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#cta" class="btn btn-primary">Talk to Expert</a>
         </div>
-        <div class="video-card">
-          <div class="video-aspect">
-            <iframe
-              src="https://www.youtube.com/embed/videocode2"
-              title="Client Testimonial 2" loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <p class="video-caption">Client Testimonial 2</p>
+    </header>
+
+    <main>
+        <!-- Section 1: Banner (Hero) -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>350+ Sustainable Products. One Seamless Import Experience.</h1>
+                <p>Discover India’s best eco-friendly exports, get instant shipping quotes, and track your order from factory to warehouse — air, sea, rail, or road.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">Browse Products</a>
+                    <a href="#cta" class="btn btn-secondary">Talk to Expert</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: WP Cards -->
+        <section class="wp-cards">
+            <div class="container">
+                <div class="wp-cards-grid">
+                    <div class="wp-card">
+                        <div class="icon">?</div>
+                        <h3>1500+ SKUs</h3>
+                        <p>A complete catalogue of sustainable products — palm leaf plates, wooden cutlery, kitchenware, and more.</p>
+                    </div>
+                    <div class="wp-card">
+                        <div class="icon">?</div>
+                        <h3>34+ Countries Covered</h3>
+                        <p>Air, sea, rail, road — we handle packing, paperwork, freight, and clearance.</p>
+                    </div>
+                    <div class="wp-card">
+                        <div class="icon">?</div>
+                        <h3>139+ White Labelling Projects</h3>
+                        <p>Custom branding and packaging for clients across 20+ countries.</p>
+                    </div>
+                    <div class="wp-card">
+                        <div class="icon">?</div>
+                        <h3>MOQ starts with 5 cbm</h3>
+                        <p>Start with LCL or scale to full container loads at your pace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Our Services -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div>
+                        <div class="service-item">
+                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=S" alt="Icon"></div>
+                            <div><h3>Supplier Consolidation</h3><p>We handle the chaos. Many vendors, one point of contact. No more 17 WhatsApp groups for one answer.</p></div>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=C" alt="Icon"></div>
+                            <div><h3>SKU Curation</h3><p>Only products proven to sell in your market. No pretty-but-pointless catalog fillers eating your capital.</p></div>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=F" alt="Icon"></div>
+                            <div><h3>Freight Consolidation</h3><p>Ship from multiple factories in a single container. One shipment. One invoice. One less headache.</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="service-item">
+                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=Q" alt="Icon"></div>
+                            <div><h3>Pre-Shipment QC</h3><p>We inspect before it leaves India. No “oh, this batch is slightly different” surprises when it lands.</p></div>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=L" alt="Icon"></div>
+                            <div><h3>Lead Time Compliance</h3><p>Deadlines are deadlines. We ship when promised. No ghosting. No mysterious delays.</p></div>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=W" alt="Icon"></div>
+                            <div><h3>Destination Warehousing & 3PL</h3><p>We store, pick, pack, and ship from your own market — faster deliveries, lower last-mile costs.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Process Flow Chart -->
+        <section class="process-flow">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="flow-chart">
+                    <div class="flow-step">
+                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=1" alt=""></div>
+                        <h3>Order Confirmation</h3><p>Purchase order locked, terms agreed.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=2" alt=""></div>
+                        <h3>Manufacturing</h3><p>Factories kick off production.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=3" alt=""></div>
+                        <h3>Quality Inspection</h3><p>Early-stage and final checks.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=4" alt=""></div>
+                        <h3>Packaging</h3><p>Shelf-ready packaging begins.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=5" alt=""></div>
+                        <h3>Dispatch & Sailing</h3><p>Goods leave factory, paperwork handled.</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=6" alt=""></div>
+                        <h3>Warehouse & 3PL</h3><p>Cargo arrives for last-mile delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Export Products Section -->
+        <section id="top-exports" class="top-exports">
+            <div class="container">
+                <h2>Top Export Products in Home Kitchen & Decor</h2>
+                <p class="section-subtitle">Sustainable products for private label, high margins, minimal documentation, compliance & regulation. Ships Via Sea/Air</p>
+                <div class="export-products-grid">
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Palm+Leaf+Plates" alt="Palm Leaf Plates">
+                        <h3>Palm Leaf Plates</h3>
+                    </div>
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Birchwood+Cutlery" alt="Birchwood Cutlery">
+                        <h3>Birchwood Cutlery</h3>
+                    </div>
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Bamboo+Toothbrush" alt="Bamboo Toothbrush">
+                        <h3>Bamboo Toothbrush</h3>
+                    </div>
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Bamboo+Tissue" alt="Bamboo Tissue">
+                        <h3>Bamboo Tissue</h3>
+                    </div>
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Bagasse+Tableware" alt="Bagasse Tableware">
+                        <h3>Bagasse Tableware</h3>
+                    </div>
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Sal+Leaf+Tableware" alt="Sal Leaf Disposable Tableware">
+                        <h3>Sal Leaf Disposable Tableware</h3>
+                    </div>
+                    <div class="export-product-card">
+                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Coconut+Shell+Bowls" alt="Coconut Shell Bowls">
+                        <h3>Coconut Shell Bowls</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Product Categories -->
+        <section id="products" class="product-categories">
+            <div class="container">
+                <h2>Our Product Categories</h2>
+                <div class="product-categories-grid">
+                    <a href="#" class="category-card">
+                        <img src="https://placehold.co/400x300/cccccc/ffffff?text=Palm+Leaf+Plates" alt="Palm Leaf Plates">
+                        <div class="overlay"><h3>Palm Leaf Plates</h3></div>
+                    </a>
+                    <a href="#" class="category-card">
+                        <img src="https://placehold.co/400x300/cccccc/ffffff?text=Wooden+Cutlery" alt="Wooden Cutlery">
+                        <div class="overlay"><h3>Wooden Cutlery</h3></div>
+                    </a>
+                    <a href="#" class="category-card">
+                        <img src="https://placehold.co/400x300/cccccc/ffffff?text=Kitchenware" alt="Kitchenware">
+                        <div class="overlay"><h3>Kitchenware</h3></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Customer Reviews -->
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="author-info">
+                            <img src="https://placehold.co/50x50/cccccc/ffffff?text=JD" alt="Client Logo">
+                            <span class="author">- John D., USA</span>
+                        </div>
+                        <p>"The supplier consolidation service is a game-changer. Arbhu turned a chaotic process with 5 different factories into one simple weekly update. Huge time saver."</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="author-info">
+                            <img src="https://placehold.co/50x50/cccccc/ffffff?text=MS" alt="Client Logo">
+                             <span class="author">- Maria S., Germany</span>
+                        </div>
+                        <p>"Their pre-shipment QC is incredibly thorough. We haven't had a single quality issue since we started working with them. The peace of mind is invaluable."</p>
+                    </div>
+                    <div class="review-card">
+                         <div class="author-info">
+                            <img src="https://placehold.co/50x50/cccccc/ffffff?text=DL" alt="Client Logo">
+                            <span class="author">- David L., Australia</span>
+                        </div>
+                        <p>"We used their white-labelling service for a new product line. The branding was perfect and the market response has been fantastic. Highly recommend."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="contact">
+            <div class="container contact-container">
+                <form class="contact-form">
+                    <h3>Contact Us</h3>
+                    <p>We're Always Here To Help You Make Eco-Friendly Choices.</p>
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message *" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How Long Does A Bagasse Tableware Product Take To Decompose?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How Many Colors Can I Choose For My Bagasse Tableware Products?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is Sugas Bagasse Tableware Safe For Food Contact?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do You Provide Samples? Is It Free Or Extra?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What Are The Dimensions Of Your Sugarcane Tableware Products?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I Customize On The Products Or Package?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What Is The Standard Production Time For Each Order?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What Price Terms Are Acceptable?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What's Your Payment Terms?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How Many Colors Can I Choose For My Bagasse Tableware Products?</h3>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="pre-footer-cta">
+                <div>
+                    <h2>Ready to Grow Your Business?</h2>
+                    <p>Join thousands of satisfied B2B clients who trust us for their sourcing and manufacturing needs.</p>
+                </div>
+                <a href="#" class="btn">GET STARTED →</a>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Arbhu Enterprises Inc.</h4>
+                    <p>Leading the world in sustainable, high-quality dinnerware made from fallen palm leaves.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=f" alt="Facebook"></a>
+                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=t" alt="Twitter"></a>
+                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=in" alt="LinkedIn"></a>
+                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=i" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">B2B Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Connected</h4>
+                    <p>Get the latest on new products and promotions.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Arbhu Enterprises Inc. All Rights Reserved.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- EXTRO (CTA + link columns) -->
-  <section id="extro" class="extro">
-    <div class="container">
-      <div class="extro-cta">
-        <div class="extro-cta-text">
-          <h3>Ready to Grow Your Business?</h3>
-          <p>Join thousands of satisfied B2B clients who trust us for their sourcing and manufacturing needs.</p>
-        </div>
-        <a class="btn btn-light" href="#contact">Get Started ➜</a>
-      </div>
-
-      <div class="extro-columns">
-        <div class="extro-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="https://arbhuenterprises.com/about-us/" target="_blank" rel="noopener">About Us</a></li>
-            <li><a href="https://arbhuenterprises.com/" target="_blank" rel="noopener">Our Story</a></li>
-            <li><a href="#" aria-disabled="true">Careers</a></li>
-            <li><a href="#" aria-disabled="true">Certifications</a></li>
-            <li><a href="#" aria-disabled="true">Gallery</a></li>
-            <li><a href="#" aria-disabled="true">Sitemap</a></li>
-          </ul>
-        </div>
-
-        <div class="extro-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Sourcing</a></li>
-            <li><a href="#services">Manufacturing</a></li>
-            <li><a href="#services">Vendor Onboarding</a></li>
-            <li><a href="#services">B2B Collections</a></li>
-            <li><a href="#services">DFY Ecom Store</a></li>
-            <li><a href="#services">Whitelabelling</a></li>
-          </ul>
-        </div>
-
-        <div class="extro-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="https://arbhuenterprises.com/blog/" target="_blank" rel="noopener">Blogs</a></li>
-            <li><a href="#" aria-disabled="true">Newsletter</a></li>
-            <li><a href="#products">All Product Catalog</a></li>
-            <li><a href="#products">Order Samples</a></li>
-            <li><a href="#" aria-disabled="true">B2B FAQs</a></li>
-            <li><a href="https://wa.me/916381509553" target="_blank" rel="noopener">Book Meetings</a></li>
-          </ul>
-        </div>
-
-        <div class="extro-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#" aria-disabled="true">Member Ordering</a></li>
-            <li><a href="#" aria-disabled="true">Credit</a></li>
-            <li><a href="#" aria-disabled="true">Affiliate Program</a></li>
-            <li><a href="#" aria-disabled="true">Join Discord</a></li>
-          </ul>
-        </div>
-
-        <div class="extro-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#" aria-disabled="true">Terms &amp; Conditions</a></li>
-            <li><a href="#" aria-disabled="true">Privacy Policy</a></li>
-            <li><a href="#" aria-disabled="true">Shipping Policy</a></li>
-            <li><a href="#" aria-disabled="true">Returns &amp; Refunds</a></li>
-          </ul>
-          <h4 class="mt-16">Testimonials</h4>
-          <ul>
-            <li><a href="#reviews">B2B Reviews</a></li>
-            <li><a href="#videos">B2C Reviews</a></li>
-            <li><a href="#videos">B2B Testimonials</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Arbhu Enterprises</small>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-</body>
-</html>
-
-
 
