@@ -1,38 +1,16 @@
-"""document.addEventListener('DOMContentLoaded', function () {
-    const faqItems = document.querySelectorAll('.faq-item');
+document.addEventListener('DOMContentLoaded', function () {
+    const faqQuestions = document.querySelectorAll('.faq-question');
 
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const icon = question.querySelector('.toggle-icon');
-
+    faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
+            const item = question.parentElement;
             const currentlyActive = document.querySelector('.faq-item.active');
             
             if (currentlyActive && currentlyActive !== item) {
                 currentlyActive.classList.remove('active');
-                currentlyActive.querySelector('.toggle-icon').textContent = '+';
             }
 
             item.classList.toggle('active');
-            if (item.classList.contains('active')) {
-                icon.textContent = '-';
-            } else {
-                icon.textContent = '+';
-            }
         });
     });
 });
-"""
-
-# Write files
-with open('/mnt/data/index.html', 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-with open('/mnt/data/style.css', 'w', encoding='utf-8') as f:
-    f.write(css_content)
-
-with open('/mnt/data/script.js', 'w', encoding='utf-8') as f:
-    f.write(js_content)
-
-'/mnt/data/index.html', '/mnt/data/style.css', '/mnt/data/script.js'
-
