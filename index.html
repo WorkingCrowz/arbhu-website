@@ -4,61 +4,772 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artisanal Eco-Friendly Kitchenware | Premier India Sourcing & Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Google Font --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* --- CSS Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FCFCF9; /* Neutral Off-White */
+            color: #333333; /* Dark Charcoal Text */
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            color: #1C1C1C;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: #4A7C59; /* Eco-friendly Green */
+            color: #fff;
+            border-color: #4A7C59;
+        }
+
+        .btn-primary:hover {
+            background-color: #3B6347; /* Darker Green */
+            border-color: #3B6347;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #333;
+            border-color: #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #fff;
+            border-color: #005A9C; /* Blue hover */
+            color: #005A9C;
+        }
+        
+        .btn-light {
+            background-color: #fff;
+            color: #333;
+            border-color: #fff;
+        }
+        .btn-light:hover {
+            background-color: #f0f0f0;
+            border-color: #f0f0f0;
+        }
+
+
+        /* --- HEADER STYLES --- */
+        .primary-header {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2rem;
+            font-weight: normal;
+            letter-spacing: 0.2em;
+            color: #1C1C1C;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 40px;
+            max-width: 600px;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        .search-bar .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .header-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .header-nav .btn-signup {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .header-nav .btn-signup:hover {
+            background-color: #000;
+        }
+
+        /* Secondary Header (for page links) */
+        .secondary-header {
+            background-color: #FCFCF9;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #eee;
+        }
+        .secondary-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .secondary-nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .secondary-nav a:hover {
+            color: #005A9C; /* Blue hover */
+        }
+        .secondary-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0px;
+            left: 0;
+            background-color: #005A9C; /* Blue hover */
+            transition: width 0.3s ease;
+        }
+        .secondary-nav a:hover::after {
+            width: 100%;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1588862959432-64f3b3c06319?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+            padding: 140px 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #f0f0f0;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .hero .btn-secondary {
+            background-color: rgba(255,255,255,0.1);
+            border-color: #fff;
+            color: #fff;
+        }
+        .hero .btn-secondary:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* --- WP Cards Section --- */
+        .wp-cards-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .wp-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        .wp-card {
+            text-align: left;
+        }
+        .wp-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #4A7C59;
+        }
+        .wp-card h3 {
+            font-size: 1.5rem;
+            color: #1C1C1C;
+            margin-bottom: 10px;
+        }
+        .wp-card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* --- Services Section --- */
+        .services {
+             background-color: #F4F1E9; /* Warm Beige */
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px 60px;
+        }
+        .service-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .service-item .icon {
+            flex-shrink: 0;
+            color: #4A7C59;
+            font-size: 2rem;
+            margin-top: -5px;
+        }
+        .service-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .service-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        /* --- Process Flow Section --- */
+        .process-flow {
+            background-color: #fff;
+        }
+        .process-flow h2 {
+            margin-bottom: 80px;
+        }
+        .flow-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+        .flow-timeline::before {
+            content: '';
+            position: absolute;
+            top: 35px; /* Vertically center with the circles */
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background-color: #ddd;
+            z-index: 1;
+        }
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 160px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .flow-step .icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+        .flow-step h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .flow-step p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        .flow-step:hover .icon {
+            border-color: #005A9C; /* Blue hover */
+            color: #005A9C;
+        }
+
+        /* --- Product Categories Section --- */
+        .product-categories {
+            background-color: #F4F1E9; /* Warm Beige */
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            text-align: left;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .product-card .info {
+            padding: 25px;
+        }
+        .product-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* --- Customer Reviews Section --- */
+        .reviews {
+            background-color: #fff;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .review-card {
+            background-color: #FCFCF9;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        .review-card .author-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .review-card .author-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        .review-card .author {
+            font-weight: 600;
+            color: #1C1C1C;
+        }
+        .review-card p {
+            font-style: italic;
+            color: #555;
+            font-size: 1.05rem;
+        }
+        
+        /* --- Customer Success Section --- */
+        .customer-success-section {
+            background-color: #FCFCF9;
+            padding: 0;
+        }
+        .success-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            background-color: #2C3E50; /* Dark Blue background */
+            color: #fff;
+            padding: 60px;
+            border-radius: 20px;
+        }
+        .success-content .pill-tag {
+            display: inline-block;
+            background-color: rgba(0,0,0,0.3);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .success-content h2 {
+            text-align: left;
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .success-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .success-video {
+            position: relative;
+            cursor: pointer;
+        }
+        .success-video img {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+        }
+        .success-video .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 0, 0, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+        .success-video:hover .play-button {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        /* --- FAQ Section --- */
+        .faq-section {
+            background-color: #F4F1E9; /* Warm Beige */
+        }
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #e0dccc;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .faq-question h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .faq-question .toggle-icon {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #005A9C; /* Blue icon */
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            padding: 0 20px;
+        }
+        .faq-answer p {
+            padding-bottom: 20px;
+            color: #555;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust as needed for answer length */
+        }
+        .faq-item.active .toggle-icon {
+            transform: rotate(45deg);
+        }
+
+        /* --- Final CTA Section --- */
+        .final-cta {
+            background: linear-gradient(rgba(74, 124, 89, 0.8), rgba(74, 124, 89, 0.8)), url('https://images.unsplash.com/photo-1578575437130-5278ce68f79f?auto=format&fit=crop&q=80&w=2073') no-repeat center center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        .final-cta .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .final-cta .btn-secondary {
+            background-color: transparent;
+            border-color: rgba(255,255,255,0.7);
+            color: #fff;
+        }
+         .final-cta .btn-secondary:hover {
+            background-color: #fff;
+            color: #4A7C59;
+            border-color: #fff;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background-color: #2C3E50; /* Dark Blue Footer */
+            color: #f8f9fa;
+            padding: 80px 0 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            padding-bottom: 60px;
+        }
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .footer-col p {
+            color: #adb5bd;
+            font-size: 0.95rem;
+            max-width: 250px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+        .footer-col ul a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-col ul a:hover {
+            color: #fff;
+        }
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 12px;
+            border: 1px solid #495057;
+            background-color: #34495E;
+            color: #fff;
+            border-radius: 8px 0 0 8px;
+        }
+        .newsletter-form button {
+            padding: 12px 18px;
+            border: none;
+            background-color: #4A7C59;
+            color: #fff;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .footer-bottom {
+            border-top: 1px solid #495057;
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #adb5bd;
+        }
+        .footer-bottom-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .footer-bottom-links a:hover {
+            color: #fff;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 1200px) {
+            .search-bar {
+                display: none;
+            }
+        }
+        @media (max-width: 992px) {
+            h2 { font-size: 2.4rem; }
+            .wp-cards-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+            .flow-timeline { justify-content: flex-start; }
+            .flow-timeline::before { display: none; }
+            .header-nav {
+                display: none;
+            }
+            .secondary-header {
+                display: none; /* Hide page links on tablet and mobile */
+            }
+            .success-card {
+                grid-template-columns: 1fr;
+                padding: 40px;
+            }
+            .success-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wp-cards-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 80px 0; }
+            .hero-cta { flex-direction: column; align-items: center; gap: 20px; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center;}
+            .footer-bottom-links { margin-top: 10px;}
+        }
+
+    </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="site-header">
+    <header class="primary-header">
         <div class="container header-container">
-            <div class="logo">Arbhu Enterprises</div>
-            <nav class="main-nav">
+            <div class="logo">ARBHU</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search sustainable products or suppliers">
+                <span class="search-icon">⚲</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#">🌐 EN-US</a>
+                <a href="#">Blog</a>
+                <a href="#">Become a Supplier</a>
+                <a href="#">Sign In</a>
+                <a href="#" class="btn-signup">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <header class="secondary-header">
+        <div class="container">
+            <nav class="secondary-nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#cta" class="btn btn-primary">Talk to Expert</a>
         </div>
     </header>
 
     <main>
-        <!-- Section 1: Banner (Hero) -->
         <section id="home" class="hero">
             <div class="container hero-content">
                 <h1>350+ Sustainable Products. One Seamless Import Experience.</h1>
                 <p>Discover India’s best eco-friendly exports, get instant shipping quotes, and track your order from factory to warehouse — air, sea, rail, or road.</p>
                 <div class="hero-cta">
                     <a href="#products" class="btn btn-primary">Browse Products</a>
-                    <a href="#cta" class="btn btn-secondary">Talk to Expert</a>
+                    <a href="#contact" class="btn btn-secondary">Talk to expert</a>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: WP Cards -->
-        <section class="wp-cards">
+        <section class="wp-cards-section">
             <div class="container">
-                <div class="wp-cards-grid">
+                 <div class="wp-cards-grid">
                     <div class="wp-card">
-                        <div class="icon">?</div>
                         <h3>1500+ SKUs</h3>
                         <p>A complete catalogue of sustainable products — palm leaf plates, wooden cutlery, kitchenware, and more.</p>
                     </div>
                     <div class="wp-card">
-                        <div class="icon">?</div>
-                        <h3>34+ Countries Covered</h3>
+                        <h3>34+ countries covered</h3>
                         <p>Air, sea, rail, road — we handle packing, paperwork, freight, and clearance.</p>
                     </div>
                     <div class="wp-card">
-                        <div class="icon">?</div>
                         <h3>139+ White Labelling Projects</h3>
                         <p>Custom branding and packaging for clients across 20+ countries.</p>
                     </div>
                     <div class="wp-card">
-                        <div class="icon">?</div>
                         <h3>MOQ starts with 5 cbm</h3>
                         <p>Start with LCL or scale to full container loads at your pace.</p>
                     </div>
@@ -66,309 +777,222 @@
             </div>
         </section>
 
-        <!-- Section 3: Our Services -->
         <section id="services" class="services">
             <div class="container">
                 <h2>Our Services</h2>
                 <div class="services-grid">
-                    <div>
-                        <div class="service-item">
-                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=S" alt="Icon"></div>
-                            <div><h3>Supplier Consolidation</h3><p>We handle the chaos. Many vendors, one point of contact. No more 17 WhatsApp groups for one answer.</p></div>
-                        </div>
-                        <div class="service-item">
-                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=C" alt="Icon"></div>
-                            <div><h3>SKU Curation</h3><p>Only products proven to sell in your market. No pretty-but-pointless catalog fillers eating your capital.</p></div>
-                        </div>
-                        <div class="service-item">
-                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=F" alt="Icon"></div>
-                            <div><h3>Freight Consolidation</h3><p>Ship from multiple factories in a single container. One shipment. One invoice. One less headache.</p></div>
+                    <div class="service-item">
+                        <div>
+                            <h3>Supplier Consolidation</h3>
+                            <p>We handle the chaos. Many vendors, one point of contact. No more 17 WhatsApp groups for one answer.</p>
                         </div>
                     </div>
-                    <div>
-                        <div class="service-item">
-                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=Q" alt="Icon"></div>
-                            <div><h3>Pre-Shipment QC</h3><p>We inspect before it leaves India. No “oh, this batch is slightly different” surprises when it lands.</p></div>
+                    <div class="service-item">
+                        <div>
+                            <h3>SKU Curation</h3>
+                            <p>Only products proven to sell in your market. No pretty-but-pointless catalog fillers eating your capital.</p>
                         </div>
-                        <div class="service-item">
-                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=L" alt="Icon"></div>
-                            <div><h3>Lead Time Compliance</h3><p>Deadlines are deadlines. We ship when promised. No ghosting. No mysterious delays.</p></div>
+                    </div>
+                    <div class="service-item">
+                        <div>
+                            <h3>Freight Consolidation</h3>
+                            <p>Ship from multiple factories in a single container. One shipment. One invoice. One less headache.</p>
                         </div>
-                        <div class="service-item">
-                            <div class="icon"><img src="https://placehold.co/40x40/1565C0/ffffff?text=W" alt="Icon"></div>
-                            <div><h3>Destination Warehousing & 3PL</h3><p>We store, pick, pack, and ship from your own market — faster deliveries, lower last-mile costs.</p></div>
+                    </div>
+                    <div class="service-item">
+                        <div>
+                            <h3>Pre-Shipment QC</h3>
+                            <p>We inspect before it leaves India. No “oh, this batch is slightly different” surprises when it lands.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div>
+                           <h3>Lead Time Compliance</h3>
+                           <p>Deadlines are deadlines. We ship when promised. No ghosting. No mysterious delays.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div>
+                            <h3>Destination Warehousing & 3PL</h3>
+                            <p>We store, pick, pack, and ship from your own market — faster deliveries, lower last-mile costs.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Process Flow Chart -->
-        <section class="process-flow">
+        <section id="process" class="process-flow">
             <div class="container">
                 <h2>How It Works</h2>
-                <div class="flow-chart">
+                <div class="flow-timeline">
                     <div class="flow-step">
-                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=1" alt=""></div>
-                        <h3>Order Confirmation</h3><p>Purchase order locked, terms agreed.</p>
+                        <div class="icon">1</div>
+                        <h3>Order Confirmation</h3>
+                        <p>Purchase order locked, terms agreed.</p>
                     </div>
                     <div class="flow-step">
-                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=2" alt=""></div>
-                        <h3>Manufacturing</h3><p>Factories kick off production.</p>
+                        <div class="icon">2</div>
+                        <h3>Manufacturing</h3>
+                        <p>Factories kick off production.</p>
                     </div>
                     <div class="flow-step">
-                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=3" alt=""></div>
-                        <h3>Quality Inspection</h3><p>Early-stage and final checks.</p>
+                        <div class="icon">3</div>
+                        <h3>Quality Inspection</h3>
+                        <p>Early-stage and final checks.</p>
                     </div>
                     <div class="flow-step">
-                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=4" alt=""></div>
-                        <h3>Packaging</h3><p>Shelf-ready packaging begins.</p>
+                        <div class="icon">4</div>
+                        <h3>Packaging</h3>
+                        <p>Shelf-ready packaging begins.</p>
                     </div>
                     <div class="flow-step">
-                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=5" alt=""></div>
-                        <h3>Dispatch & Sailing</h3><p>Goods leave factory, paperwork handled.</p>
+                        <div class="icon">5</div>
+                        <h3>Dispatch & Sailing</h3>
+                        <p>Goods leave factory, paperwork handled.</p>
                     </div>
                     <div class="flow-step">
-                        <div class="icon"><img src="https://placehold.co/40x40/ffffff/000000?text=6" alt=""></div>
-                        <h3>Warehouse & 3PL</h3><p>Cargo arrives for last-mile delivery.</p>
+                        <div class="icon">6</div>
+                        <h3>Warehouse & 3PL</h3>
+                        <p>Cargo arrives for last-mile delivery.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Top Export Products Section -->
-        <section id="top-exports" class="top-exports">
-            <div class="container">
-                <h2>Top Export Products in Home Kitchen & Decor</h2>
-                <p class="section-subtitle">Sustainable products for private label, high margins, minimal documentation, compliance & regulation. Ships Via Sea/Air</p>
-                <div class="export-products-grid">
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Palm+Leaf+Plates" alt="Palm Leaf Plates">
-                        <h3>Palm Leaf Plates</h3>
-                    </div>
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Birchwood+Cutlery" alt="Birchwood Cutlery">
-                        <h3>Birchwood Cutlery</h3>
-                    </div>
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Bamboo+Toothbrush" alt="Bamboo Toothbrush">
-                        <h3>Bamboo Toothbrush</h3>
-                    </div>
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Bamboo+Tissue" alt="Bamboo Tissue">
-                        <h3>Bamboo Tissue</h3>
-                    </div>
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Bagasse+Tableware" alt="Bagasse Tableware">
-                        <h3>Bagasse Tableware</h3>
-                    </div>
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Sal+Leaf+Tableware" alt="Sal Leaf Disposable Tableware">
-                        <h3>Sal Leaf Disposable Tableware</h3>
-                    </div>
-                    <div class="export-product-card">
-                        <img src="https://placehold.co/300x200/cccccc/ffffff?text=Coconut+Shell+Bowls" alt="Coconut Shell Bowls">
-                        <h3>Coconut Shell Bowls</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Product Categories -->
         <section id="products" class="product-categories">
             <div class="container">
-                <h2>Our Product Categories</h2>
-                <div class="product-categories-grid">
-                    <a href="#" class="category-card">
-                        <img src="https://placehold.co/400x300/cccccc/ffffff?text=Palm+Leaf+Plates" alt="Palm Leaf Plates">
-                        <div class="overlay"><h3>Palm Leaf Plates</h3></div>
+                <h2>Product Categories</h2>
+                <p class="section-subtitle">Explore our most popular categories of sustainable products. Click on any category to see the full range of products available.</p>
+                <div class="product-grid">
+                    <a href="#" class="product-card">
+                        <img src="https://images.unsplash.com/photo-1617997321304-8f464d4b1a2e?auto=format&fit=crop&q=80&w=1770" alt="Palm Leaf Plates">
+                        <div class="info"><h3>Palm Leaf Tableware</h3></div>
                     </a>
-                    <a href="#" class="category-card">
-                        <img src="https://placehold.co/400x300/cccccc/ffffff?text=Wooden+Cutlery" alt="Wooden Cutlery">
-                        <div class="overlay"><h3>Wooden Cutlery</h3></div>
+                    <a href="#" class="product-card">
+                        <img src="https://images.unsplash.com/photo-1629424998336-16785084918a?auto=format&fit=crop&q=80&w=1770" alt="Birchwood Cutlery">
+                        <div class="info"><h3>Wooden Cutlery</h3></div>
                     </a>
-                    <a href="#" class="category-card">
-                        <img src="https://placehold.co/400x300/cccccc/ffffff?text=Kitchenware" alt="Kitchenware">
-                        <div class="overlay"><h3>Kitchenware</h3></div>
+                    <a href="#" class="product-card">
+                        <img src="https://images.unsplash.com/photo-1601614238759-7a32371af22b?auto=format&fit=crop&q=80&w=1770" alt="Coconut Shell Bowls">
+                        <div class="info"><h3>Coconut & Bamboo Goods</h3></div>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Section 6: Customer Reviews -->
         <section id="reviews" class="reviews">
             <div class="container">
                 <h2>What Our Clients Say</h2>
                 <div class="review-grid">
                     <div class="review-card">
                         <div class="author-info">
-                            <img src="https://placehold.co/50x50/cccccc/ffffff?text=JD" alt="Client Logo">
-                            <span class="author">- John D., USA</span>
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client Avatar">
+                            <span class="author">- Alex R., United States</span>
                         </div>
-                        <p>"The supplier consolidation service is a game-changer. Arbhu turned a chaotic process with 5 different factories into one simple weekly update. Huge time saver."</p>
+                        <p>"Arbhu's supplier consolidation is a lifesaver. What used to be a logistical nightmare with multiple factories is now one simple point of contact. Our efficiency has skyrocketed."</p>
                     </div>
                     <div class="review-card">
                         <div class="author-info">
-                            <img src="https://placehold.co/50x50/cccccc/ffffff?text=MS" alt="Client Logo">
-                             <span class="author">- Maria S., Germany</span>
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client Avatar">
+                             <span class="author">- Priya S., United Kingdom</span>
                         </div>
-                        <p>"Their pre-shipment QC is incredibly thorough. We haven't had a single quality issue since we started working with them. The peace of mind is invaluable."</p>
+                        <p>"The pre-shipment quality control is flawless. We haven't had a single issue with product quality since partnering with them. It's a level of reliability we can build our business on."</p>
                     </div>
                     <div class="review-card">
                          <div class="author-info">
-                            <img src="https://placehold.co/50x50/cccccc/ffffff?text=DL" alt="Client Logo">
-                            <span class="author">- David L., Australia</span>
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Client Avatar">
+                            <span class="author">- Ben C., Australia</span>
                         </div>
-                        <p>"We used their white-labelling service for a new product line. The branding was perfect and the market response has been fantastic. Highly recommend."</p>
+                        <p>"Their white-labelling service was seamless. We launched our new branded line of cutlery ahead of schedule, and the market response has been phenomenal. Truly a full-service partner."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="customer-success-section">
+            <div class="container">
+                <div class="success-card">
+                    <div class="success-content">
+                        <span class="pill-tag">Client Spotlight</span>
+                        <h2>Word Of Mouth Customer Success Is Our Marketing</h2>
+                        <p>"Arbhu's supplier consolidation is a lifesaver. What used to be a logistical nightmare with multiple factories is now one simple point of contact. Our efficiency has skyrocketed."</p>
+                        <a href="#contact" class="btn btn-light">Become a Partner</a>
+                    </div>
+                    <div class="success-video">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1770" alt="Client testimonial video thumbnail">
+                        <div class="play-button">▶</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Us Section -->
-        <section id="contact" class="contact">
-            <div class="container contact-container">
-                <form class="contact-form">
-                    <h3>Contact Us</h3>
-                    <p>We're Always Here To Help You Make Eco-Friendly Choices.</p>
-                    <div class="form-group">
-                        <input type="text" placeholder="Full Name *" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email *" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Message *" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq">
+        <section id="faq" class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
-                <div class="faq-grid">
+                <div class="faq-accordion">
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>How Long Does A Bagasse Tableware Product Take To Decompose?</h3>
+                            <h3>What is your Minimum Order Quantity (MOQ)?</h3>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                    </div>
-                     <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How Many Colors Can I Choose For My Bagasse Tableware Products?</h3>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                            <p>Our MOQ is flexible, starting from 5 cubic meters (cbm) for Less than Container Load (LCL) shipments. This allows you to start with smaller quantities and scale up to Full Container Loads (FCL) as your business grows.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>Is Sugas Bagasse Tableware Safe For Food Contact?</h3>
+                            <h3>Do you offer private labeling and custom packaging?</h3>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                            <p>Absolutely. We have extensive experience with over 139 white labelling projects. We can work with you to create custom branding, logos, and market-ready packaging that reflects your brand's identity.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>Do You Provide Samples? Is It Free Or Extra?</h3>
+                            <h3>How do you ensure product quality?</h3>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                            <p>We have a rigorous quality control process. This includes an early-stage inspection during manufacturing and a final, comprehensive pre-shipment check to ensure every product meets the approved specifications before it leaves India.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>What Are The Dimensions Of Your Sugarcane Tableware Products?</h3>
+                            <h3>Can you consolidate products from multiple suppliers in India?</h3>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I Customize On The Products Or Package?</h3>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What Is The Standard Production Time For Each Order?</h3>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What Price Terms Are Acceptable?</h3>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What's Your Payment Terms?</h3>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How Many Colors Can I Choose For My Bagasse Tableware Products?</h3>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                            <p>Yes, this is one of our core services. We offer both supplier and freight consolidation, allowing you to source from multiple factories and ship everything in a single, optimized container. This simplifies logistics and reduces costs.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="contact" class="final-cta">
+            <div class="container">
+                <h2>Ready to start your import journey?</h2>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Talk to Expert</a>
+                    <a href="#" class="btn btn-secondary">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <div class="pre-footer-cta">
-                <div>
-                    <h2>Ready to Grow Your Business?</h2>
-                    <p>Join thousands of satisfied B2B clients who trust us for their sourcing and manufacturing needs.</p>
-                </div>
-                <a href="#" class="btn">GET STARTED →</a>
-            </div>
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Arbhu Enterprises Inc.</h4>
-                    <p>Leading the world in sustainable, high-quality dinnerware made from fallen palm leaves.</p>
-                    <div class="social-links">
-                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=f" alt="Facebook"></a>
-                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=t" alt="Twitter"></a>
-                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=in" alt="LinkedIn"></a>
-                        <a href="#"><img src="https://placehold.co/20x20/ffffff/000000?text=i" alt="Instagram"></a>
-                    </div>
+                    <h4>Arbhu</h4>
+                    <p>Connecting the world to India's finest artisanal and eco-friendly products.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="#">Products</a></li>
+                        <li><a href="#products">Products</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Sustainability</a></li>
                         <li><a href="#">B2B Portal</a></li>
@@ -378,7 +1002,7 @@
                     <h4>Support</h4>
                     <ul>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#">Shipping</a></li>
                         <li><a href="#">Returns</a></li>
                     </ul>
@@ -393,7 +1017,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2024 Arbhu Enterprises Inc. All Rights Reserved.</span>
+                <span>© 2025 Arbhu. All Rights Reserved.</span>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -401,9 +1025,25 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
 
-    <script src="script.js"></script>
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const currentlyActive = document.querySelector('.faq-item.active');
+                    
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
-
-
